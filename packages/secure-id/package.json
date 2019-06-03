@@ -1,0 +1,14 @@
+{
+    "name": "@openland/secure-id",
+    "description": "Library for creating encrypted ids that is safe to use in public facing API",
+    "version": "0.1.0",
+    "main": "lib/index.js",
+    "typings": "lib/index.d.ts",
+    "repository": "https://github.com/openland/secure-id",
+    "author": "Steve Kite <steve@openland.com>",
+    "license": "MIT",
+    "gitHead": "c697113adf1cb4b345de8d545d09c6b3f002792b",
+    "dependencies": {
+        "hashids": "^1.2.2"
+    }
+}

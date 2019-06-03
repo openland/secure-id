@@ -1,0 +1,31 @@
+{
+  "private": true,
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ]
+  },
+  "scripts": {
+    "build": "yarn tsc --build",
+    "test": "yarn jest",
+    "release": "yarn build && yarn test && yarn lerna publish --force-publish"
+  },
+  "devDependencies": {
+    "@types/jest": "^24.0.13",
+    "@types/node": "^12.0.4",
+    "awesome-typescript-loader": "^5.2.1",
+    "babel-loader": "^8.0.4",
+    "babel-preset-es2015": "^6.24.1",
+    "jest": "^23.6.0",
+    "lerna": "^3.6.0",
+    "ts-jest": "^23.10.5",
+    "tslint": "^5.11.0",
+    "tslint-config-prettier": "^1.17.0",
+    "tslint-react": "^3.6.0",
+    "typescript": "^3.2.2"
+  },
+  "dependencies": {
+    "@types/hashids": "^1.0.30",
+    "hashids": "^1.2.2"
+  }
+}
