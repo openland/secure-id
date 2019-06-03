@@ -2,6 +2,10 @@
 `@openland/secure-id` is a library for encrypting id's from database to make them safe to use in API calls.
 
 ## How to use
+```
+yarn install @openland/secure-id
+```
+
 Before using your library you need to create a *Shared Secret* and distributed it to every application node that is going to use this library. Using of OpenSSH to generate long random string is highly recommended. Shared Secret MUST NOT be stored in database, use configuration files or environment variables instead.
 Shared Secret MUST be stored in a safe place since it could NOT be changed.
 
