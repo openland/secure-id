@@ -18,6 +18,7 @@ describe('SecID Module', () => {
         let parsed2 = stringId.parse(serialized);
         expect(parsed2).toEqual('test');
         expect(serialized).toEqual('7d225718e932a56b5ecc8283b6d7bce593');
+        expect(stringId.parse(stringId.serialize('')));
     });
     it('Should serialize non-ASCII text correctly', () => {
         let factory = new SecIDFactory('Shared Secret', 'hex');

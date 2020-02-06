@@ -17,7 +17,7 @@ const hashidsSalt = '11705939e5cad46fa04a6fc838a3fa25c0f50439c946101199b8506ff73
 // Truncated size of HMAC
 const HMAC_LENGTH = 8;
 // Expected minimum Key Length
-const MIN_KEY_LENGTH = 15;
+const MIN_KEY_LENGTH = 13;
 
 type SecIDv2ValueTypeName = 'number' | 'string';
 type SecIDv2ValueType = number | string;
@@ -164,7 +164,7 @@ function decrypt(valuestr: string, value: Buffer, type: number | Set<number>, en
     } else {
         correctType = type.has(valueTypeId);
     }
-    if (correctType && correctVersion && hmacCorrect && correctValueTypeId && valueRes) {
+    if (correctType && correctVersion && hmacCorrect && correctValueTypeId && valueRes !== undefined) {
         return { id: valueRes, type: valueTypeId };
     }
     throw new IDMailformedError('Invalid id: ' + valuestr);
